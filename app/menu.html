@@ -27,14 +27,15 @@
     <div class="container">
         <div class="row row-content"
              ng-init="
-              dish= [
+              dishes=[
               {
                 name:'Uthapizza',
                 image:'images/uthapizza.png',
                 category:'mains',
                 label:'Hot',
                 price:'4.99',
-                description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',comment:''
+                description:'A unique combination of Indian Uthappam (pancake) and      Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
+                comment:''
               },
               {
                 name:'Zucchipakoda',
@@ -64,6 +65,7 @@
                 comment:''
               }
               ]">
+
             <div class="col-xs-12">
                 <ul class="media-list">
                     <li class="media" ng-repeat="dish in dishes">
@@ -74,10 +76,10 @@
                             </a>
                         </div>
                         <div class="media-body">
-                            <h2 class="media-heading">{{dish.name}}
+                            <h2 class="media-heading">{{dish.name}} 
                                 <span class="label label-danger">{{dish.label}}</span>
                                 <span class="badge">{{dish.price | currency}}</span></h2>
-                            <p>{{dish.descrption}}</p>
+                            <p>{{dish.description}}</p>
                             <p>Comment: {{dish.comment}}</p>
                             <p>Type your comment:
                              <input type="text" ng-model="dish.comment"></p>
@@ -87,7 +89,6 @@
             </div>
         </div> <!-- row 0 -->
     </div> <!-- Contaienr -->
-
     <script src="../bower_components/angular/angular.min.js"></script>
 </body>
 
